@@ -19,13 +19,14 @@ export default function Register() {
     async function handleRegister(e) {
         e.preventDefault();
 
-        const data = {
+        const data ={
             name,
             email,
             whatsapp,
             city,
             uf,
-        };
+        }
+    
 
         try {
             const response = await api.post('/', data);
