@@ -28,7 +28,7 @@ export default function Profile () {
 
     async function handleDeleteIncident(id) {
         try {
-            await api.delete(`incident/${id}`, {
+            await api.delete(`incidents/${id}`, {
                 headers: {
                     Authorization: ongId,
                 }
@@ -61,7 +61,7 @@ export default function Profile () {
             <h1>Casos cadastrados</h1>
 
             <ul>
-                {incidents.map(incident =>(
+                {incidents.map(incident => (
                     <li key={incident.id}>
                     <strong>CASO:</strong>
                     <p>{incident.title}</p>

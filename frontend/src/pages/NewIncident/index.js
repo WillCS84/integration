@@ -33,7 +33,7 @@ export default function NewIncident() {
                 }
             })
 
-            history.push('/profile');
+            history.push('/Profile');
         } catch (err) {
             alert('Erro ao cadastrar caso, tente novamente.');
         }
@@ -58,19 +58,19 @@ export default function NewIncident() {
                     <input 
                         placeholder= "Título do caso" 
                         value={title}
-                        onChange={e =>setTitle(e.target.value)}
+                        onChange={e => setTitle(e.target.value)}
                     />
 
                     <textarea 
                         placeholder= "Descrição" 
                         value={description}
-                        onChange={e =>setDescription(e.target.value)}
+                        onChange={e => setDescription(e.target.value)}
                     />
 
                     <input 
                         placeholder= "Valor em Reais" 
                         value={value}
-                        onChange={e =>setValue(e.target.value)}
+                        onChange={e => setValue(e.target.value)}
                     />
 
                     <button className= "button" type= "submit">Cadastrar</button>
