@@ -17,7 +17,7 @@ export default function NewIncident() {
 
     const ongId = localStorage.getItem('ongId');
 
-    async function handleNewIncident(e) {
+    async function handleNewIncidents (e) {
         e.preventDefault();
 
         const data = {
@@ -33,7 +33,7 @@ export default function NewIncident() {
                 }
             })
 
-            history.push('/Profile');
+            history.push('/profile');
         } catch (err) {
             alert('Erro ao cadastrar caso, tente novamente.');
         }
@@ -48,13 +48,13 @@ export default function NewIncident() {
                     <h1>Cadastrar novo caso</h1>
                     <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
                 
-                    <Link className= "back-link" to="/profile">
+                    <Link className = "back-link" to="/profile">
                         <FiArrowLeft size={16} color="#E02041" />
                         Voltar para home
                     </Link>
                 </section>
 
-                <form>
+                <form onSubmit={handleNewIncidents}>
                     <input 
                         placeholder= "Título do caso" 
                         value={title}
