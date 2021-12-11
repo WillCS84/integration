@@ -24,7 +24,7 @@ export default function Logon() {
 
       history.push('/profile')
     } catch (err) {
-        alert('Falha no Login, tente novamente.');
+        alert('Não é uma ID válida, isira uma ID existente.');
     }
   }
 
